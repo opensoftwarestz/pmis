@@ -1,0 +1,54 @@
+<div style="background-color:#386679;height:30">
+<?php
+ini_set('error_reporting', E_ALL & ~E_NOTICE);        
+?>
+<ul id="nav" class="dropdown dropdown-horizontal">
+<li class="first"><a href="#" style="font-size:13;">Administer Database</a>
+		<ul>
+		<li><a href="add_technician.php" style="font-size:11;">Add Technician</a></li>
+		<li><a href="add_technician_category.php" style="font-size:11;">Add Technician Categories</a></li>
+		<li><a href="add_project.php" style="font-size:11;">Add Project/Sub-project</a></li>
+		<li><a href="define_unit.php" style="font-size:11;">Sajili Unit</a></li>
+		<li><a href="defineCustomer.php" style="font-size:11;">Sajili Mteja</a></li>
+		<li><a href="defineExpenditures.php" style="font-size:11;">Sajili Aina Ya Matumizi</a></li>
+		<li><a href="editItems.php">Badili Taarifa Za Bidhaa</a></li>
+		<li><a href="add_branch.php">Tawi</a></li>
+		</ul>
+</li>
+
+<li class="first">
+		<a href="add_item_purchase.php" style="font-size:13;">Add Purchase/Expenditures To A Project</a>
+</li>
+
+<li class="first"><a href="implementation_report.php" style="font-size:13">Project Implementation Report</a></li>	
+
+<li class="first"><a href="#" style="font-size:13">Madeni/Madai</a>
+		<ul>
+		<li><a href="add_debit_credit.php" style="font-size:11;">Sajili Deni/Dai</a></li>
+		<li><a href="clear_debit.php" style="font-size:11;">Lipa Deni</a></li>
+		<li><a href="clear_credit.php" style="font-size:11;">Lipa Dai</a></li>
+		<li><a href="debit_credit_report.php" style="font-size:11;">Ripoti Ya Madeni Na Madai</a></li>
+		</ul>
+</li>
+
+<li class="first"><a href="#" style="font-size:13">Watumishi</a>
+		<ul>
+		<li><a href="add_employee.php" style="font-size:11;">Ajiri Mtumishi Mpya</a></li>
+		<li><a href="terminate_employee.php" style="font-size:11;">Sitisha Mkataba Wa Mtumishi</a></li>
+		<li><a href="add_designation.php" style="font-size:11;">Sajili Cheo</a></li>
+		<li><a href="pay_salary.php" style="font-size:11;">Lipa Mishahara</a></li>			
+		<li><a href="salary_report.php" style="font-size:11;">Ripoti Ya Malipo Ya Mishahara</a></li>
+		<li><a href="staffs_list.php" style="font-size:11;">Orodha Ya Watumishi</a></li>
+		</ul>
+</li>
+
+<li class="first"><a href="#" style="font-size:13">User</a>
+		<ul>
+		<li><a href="changePassword.php" style="font-size:13">Change Password</a></li>
+		<li><a href="logout.php" style="font-size:13">Logout</a></li>
+		<li><a href="create_user.php" style="font-size:11;">Create Account</a></li>		
+		</ul>
+</li>
+				
+</ul>
+</div>

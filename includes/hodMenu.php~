@@ -1,0 +1,15 @@
+<ul id="nav" class="dropdown dropdown-horizontal">
+		<li class="first"><a href="#">CA Management</a>
+			<ul>
+		<li><a href="registerResults.php">Add Student Course Work</a></li>
+		<li><a href="uploadCourseWork.php">Upload Student Course Work</a></li>		
+		</ul>
+</li>
+		<li><a href="viewAssignedCourses.php">View Assigned Course(s)</a></li>
+			
+		<li><a href="viewResults.php">View Results</a></li>
+		<li><a href="requestChangeResultsTeacher.php">Amend Course Work</a></li>
+		<li><a href="viewRequestHod.php">Change Results Requests</a></li>	
+		<li><a href="requestStatusHod.php">View Request Status</a></li>					
+		<li><a href="logout.php">Logout</a></li>
+</ul>

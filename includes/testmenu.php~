@@ -1,0 +1,41 @@
+ <div id="my_menu" class="sdmenu">
+    
+      <div>
+        <span>Uploads</span>
+        <a href="uploadFees.php">Upload School Fees Details</a>
+	<a href="#">Upload Students Results</a>
+      </div>
+      <div class="collapsed">
+        <span>Manage Courses</span>
+        <a href="assignCourseToTeacher.php">Assign Course To A Teacher</a>
+	<a href="editAssigneCourseToTeacher.php">View/Edit Courses To Teachers</a>
+      </div>
+      <div>
+        <span>Update Records</span>
+        <a href="editCourses.php">Edit/Delete Courses</a>
+        <a href="editStudent.php">Edit/Delete Student</a>
+	<a href="editTrainer.php">Edit/Delete Trainer</a>
+      </div>
+      <div>
+        <span>Students Results</span>
+        <a href="allStudentsResults.php">All Students</a>
+	<a href="singleStudentResults.php">One Student</a>
+      </div>
+      <div>
+        <span>Print Results</span>
+        <a href="searchStudent.php">Provisional Results</a>
+	<a href="searchStudentAccProgr.php">Academic Progress</a>
+        <a href="searchStudentAccPerf.php">Academic Performance</a>
+      </div>
+        <div>
+        <span>Requests</span>
+        <a href="viewRequestRegist.php">View Requests For Change Of Results</a>
+	<a href="requestStatusRegistrar.php">Status For Change Results Requests</a>		
+	<a href="supplementaryStatusRegistrar.php">Status For Uploaded Supplementary Results</a>
+      </div>
+      <div>
+        <span>Results Aproval</span>
+        <a href="approveResults.php">Approve Results</a>	
+      </div>
+    </div>
+

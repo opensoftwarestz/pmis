@@ -1,0 +1,1 @@
+<center><h2><a href="#" style="font-size:31">Project Management Information System</a></h2><font style="font-size:25;color:white;letter-spacing:10px;font-family: "Times New Roman", Times, serif;"><i>Pmis</i></font><img src="images/house.jpg" height="90" style="position:relative;margin-left:880;bottom:85"></center>

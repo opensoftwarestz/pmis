@@ -1,0 +1,45 @@
+<div class="dock" id="dock">
+  <div class="dock-container">
+	  <a class="dock-item" href="http://www.ndesign-studio.com"><img src="images/nembo.gif" alt="home" height="30" width="30"><span>N.Design</span></a> 
+	  <a class="dock-item" href="http://www.webdesignerwall.com"><img src="images/email.png" alt="contact" /><span>Designer Wall</span></a> 
+	  <a class="dock-item" href="http://jobs.webdesignerwall.com"><img src="images/portfolio.png" alt="portfolio" /><span>Design Jobs</span></a> 
+	  <a class="dock-item" href="http://bestwebgallery.com"><img src="images/music.png" alt="music" /><span>Best Web Gallery</span></a> 
+	  <a class="dock-item" href="http://icondock.com"><img src="images/video.png" alt="video" /><span>IconDock</span></a> 
+	  <a class="dock-item" href="http://icondock.com/icons"><img src="images/history.png" alt="history" /><span>Stock Icons</span></a>
+  </div> 
+</div>
+
+
+<script type="text/javascript">
+	
+	$(document).ready(
+		function()
+		{
+			$('#dock').Fisheye(
+				{
+					maxWidth: 50,
+					items: 'a',
+					itemsText: 'span',
+					container: '.dock-container',
+					itemWidth: 40,
+					proximity: 90,
+					halign : 'center'
+				}
+			)
+			$('#dock2').Fisheye(
+				{
+					maxWidth: 60,
+					items: 'a',
+					itemsText: 'span',
+					container: '.dock-container2',
+					itemWidth: 40,
+					proximity: 80,
+					alignment : 'left',
+					valign: 'bottom',
+					halign : 'center'
+				}
+			)
+		}
+	);
+
+</script>

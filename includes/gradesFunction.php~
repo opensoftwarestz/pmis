@@ -1,0 +1,97 @@
+<?php
+function convertGrade($level,$marks)
+{
+if ($level==4 or $level==5)
+{
+if($marks>=80 and $marks<=100)
+return "A";
+else if ($marks>=65 and $marks<=79)
+return "B";
+else if ($marks>=50 and $marks<=64)
+return "C";
+else if ($marks>=40 and $marks<=49)
+return "D";
+else if ($marks>=0 and $marks<=39)
+return "F";
+else
+return "I";
+}
+
+else if($level==6)
+{
+if($marks>=75and $marks<=100)
+return "A";
+else if ($marks>=65 and $marks<=74)
+return "B+";
+else if ($marks>=55 and $marks<=64)
+return "B";
+else if ($marks>=45 and $marks<=54)
+return "C";
+else if ($marks>=35 and $marks<=44)
+return "D";
+else if ($marks>=0 and $marks<=34)
+return "F";
+else
+return "I";
+}
+}
+
+
+function getValue($level,$grade)
+{
+if ($level==4 or $level==5)
+{
+if ($grade=="A")
+return 4;
+else if ($grade=="B")
+return 3;
+else if ($grade=="C")
+return 2;
+else if ($grade=="D")
+return 1;
+else if ($grade=="F")
+return 0;
+}
+
+else if($level==6)
+{
+if ($grade=="A")
+return 5;
+else if ($grade=="B+")
+return 4;
+else if ($grade=="B")
+return 3;
+else if ($grade=="C")
+return 2;
+else if ($grade=="D")
+return 1;
+else if ($grade=="F")
+return 0;
+}
+}
+
+function getStatus($grade)
+{
+if ($grade=="D" or $grade=="F")
+$status="Failed";
+else 
+$status="Pass";
+return $status;
+}
+
+function classOfGpa($gpa)
+{
+if ($gpa==$gpa)
+$class="Discontinued";
+
+if ($gpa>=3.5 and $gpa<=4.0)
+$class= "First Class";
+else if($gpa>=3.0 and $gpa<=3.4)
+$class= "Second Class";
+else if($gpa>=2.0 and $gpa<=2.9)
+$class= "Pass";
+else if($gpa<2.0)
+$class= "Fail";
+return $class;
+}
+?>

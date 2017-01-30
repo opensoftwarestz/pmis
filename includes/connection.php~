@@ -1,0 +1,5 @@
+<?php
+ini_set('error_reporting', E_ALL & ~E_NOTICE);
+mysql_connect("localhost","pembejeo","pembejeo");
+mysql_select_db("pembejeo");
+?>
