@@ -49,7 +49,7 @@ include ("includes/menu.php");
 </div>
 <!-- end page -->
 <div id="footer">
-	<p>&copy;2012 All Rights Reserved. &nbsp;&bull;&nbsp; Developed by Ally Shaban
+	<p>&copy;2017 All Rights Reserved. &nbsp;&bull;&nbsp; Developed by Ally Shaban
 </div>
 </body>
 </html>
