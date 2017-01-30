@@ -14,3 +14,9 @@
 <li>To start using the software,standard lists like project name,technicians etc must be registered under Administer Database menu</li>
 </ol>
 </ul>
+<ul><li><b>First time login</b></li>
+<ul>
+<li>Username pmis</li>
+<li>Password pmis</li>
+</ul>
+</ul>
