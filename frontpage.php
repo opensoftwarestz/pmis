@@ -48,8 +48,8 @@ include ("includes/menu.php");
 	<div style="clear: both;">&nbsp;</div>
 </div>
 <!-- end page -->
-<div id="footer">
-	<p>&copy;2017 All Rights Reserved. &nbsp;&bull;&nbsp; Developed by Ally Shaban
-</div>
+<?php
+include("footer.html");
+?>
 </body>
 </html>
