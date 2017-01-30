@@ -120,6 +120,9 @@ CREATE TABLE IF NOT EXISTS `users` (
   PRIMARY KEY (`id`)
 ) ENGINE=MyISAM  DEFAULT CHARSET=latin1 AUTO_INCREMENT=4 ;
 
+INSERT INTO `users` (`id`, `fname`, `mname`, `lname`, `uname`, `passwd`, `last_modified`) VALUES
+(4, 'pmis Administrator', '', 'pmis Administrator', 'pmis', 'a61217ebcafa7a499beb7bc4290cadb4', '2017-01-30 11:34:27');
+
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
