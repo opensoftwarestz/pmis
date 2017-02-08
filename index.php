@@ -24,10 +24,10 @@ ob_start();
 		include("includes/connection.php");
 	$username=$_POST["uname"];
 	$password=md5($_POST["passwd"]);
-	$checkuser=mysql_query("select id,fname,mname,lname from users where uname='$username' and passwd='$password'") or die(mysql_error());	
-	if(mysql_num_rows($checkuser)==1)
+	$checkuser=mysqli_query($connect,"select id,fname,mname,lname from users where uname='$username' and passwd='$password'") or die(mysql_error());	
+	if(mysqli_num_rows($checkuser)==1)
 	{
-	list($id,$fname,$mname,$lname)=mysql_fetch_array($checkuser);
+	list($id,$fname,$mname,$lname)=mysqli_fetch_array($checkuser, MYSQLI_NUM);
 	$_SESSION["id"]=$id;
 	$_SESSION["name"]=$fname." ". $mname." ". $lname;
 	header("location:frontpage.php");

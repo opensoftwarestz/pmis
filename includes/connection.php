@@ -1,5 +1,5 @@
 <?php
 ini_set('error_reporting', E_ALL & ~E_NOTICE);
-mysql_connect("localhost","pmis","pmis");
-mysql_select_db("pmis");
+$connect = mysqli_connect("localhost","pmis","pmis");
+mysqli_select_db($connect, "pmis");
 ?>
