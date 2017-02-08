@@ -1,5 +1,5 @@
 <?php
 session_start();
-session_unregister("id");
+session_destroy("id");
 header("location:index.php");
 ?>
