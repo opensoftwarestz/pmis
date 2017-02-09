@@ -19,35 +19,20 @@ ob_start();
     <div id="container">
       <div id="content">
     <?php
-	if (isset($_POST["loginbutton"]))
-	{
-		include("includes/connection.php");
-	$username=$_POST["uname"];
-	$password=md5($_POST["passwd"]);
-	$checkuser=mysqli_query($connect,"select id,fname,mname,lname from users where uname='$username' and passwd='$password'") or die(mysql_error());	
-	if(mysqli_num_rows($checkuser)==1)
-	{
-	list($id,$fname,$mname,$lname)=mysqli_fetch_array($checkuser, MYSQLI_NUM);
-	$_SESSION["id"]=$id;
-	$_SESSION["name"]=$fname." ". $mname." ". $lname;
-	header("location:frontpage.php");
-        ob_end_flush();
-	}
-	else
-	{
-		echo "wrong Username or Password";
-	}
-	}
+	if(isset($_GET['error'])){
+		$error = urldecode($_GET['error']);
+		echo $error;
+		}
 	?>
         <div id="loginBox">
-          <h2>Login to Rafki Kilimo SIS</h2>
-          <form id="loginform" action="#" method="post" style="position:relative;top:30px">
+          <h2>Login to PMIS</h2>
+          <form id="loginform" action="includes/login.php" method="post" style="position:relative;top:30px">
             <label for="loginName">User Name:</label>
             <input id="loginName" class="textFieldLogin" name="uname" type="text" value="" />
             <label for="loginPass">Password:</label>
             <input id="loginPass" class="textFieldLogin" name="passwd" type="password" value="" />            
             <div class="MBbuttonLogin">
-              <input type="submit" id="loginButton" name='loginbutton' value="Login..." />
+              <input type="submit" id="loginButton" name="loginbutton" value="Login..." />
             </div>
           </form>
           <div class="close" />
