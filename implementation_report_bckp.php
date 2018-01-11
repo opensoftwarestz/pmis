@@ -1,5 +1,6 @@
 <?php
-include('authentication.php');
+require_once("authentication.php");
+//require_once("includes/connection.php");
 ?>
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>

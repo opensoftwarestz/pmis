@@ -1,6 +1,6 @@
 <?php
 @session_start();
-if (!$_SESSION['id'])
+if (!$_SESSION['allow'])
 {
 echo '<style type="text/css">
 <!--

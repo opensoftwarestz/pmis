@@ -1,5 +1,6 @@
 <?php
-include ("authentication.php");
+require_once("authentication.php");
+require_once("includes/connection.php");
 $project=$_REQUEST["project"];
 $start_date=date("Y-m-d",strtotime($_REQUEST["start_date"]));
 $end_date=date("Y-m-d",strtotime($_REQUEST["end_date"]));
@@ -10,8 +11,8 @@ $name="";
 get_child_project($project);
 
 foreach($projects_id as $id=>$name) {
-	$results=mysql_query("select * from project_implementation where project_id='$id' and date_implemented between '$start_date' and '$end_date'");
-	while($row=mysql_fetch_array($results)) {
+	$results=mysqli_query($connect, "select * from project_implementation where project_id='$id' and date_implemented between '$start_date' and '$end_date'");
+	while($row=mysqli_fetch_array($results, MYSQLI_ASSOC)) {
 		$project_name[]=$name;
 		$item_names[]=$row["item_name"];
 		$descriptions[]=$row["description"];
@@ -52,9 +53,9 @@ foreach($projects_id as $id=>$name) {
 
 function get_child_project($id) {
 	global $projects_id,$name;
-	$results=mysql_query("select id,name from project where parent='$id'") or die(mysql_error());
-	if(mysql_num_rows($results)>0) {		
-	while($row=mysql_fetch_array($results)) {
+	$results=mysqli_query($connect, "select id,name from project where parent='$id'") or die(mysql_error());
+	if(mysqli_num_rows($results)>0) {		
+	while($row=mysqli_fetch_array($results, MYSQLI_ASSOC)) {
 		get_project_name($row["id"]);		
 		$projects_id[$row["id"]]=$name;
 		$name="";
@@ -70,9 +71,9 @@ function get_child_project($id) {
 	
 function get_project_name($id) {
 	global $name;
-	$results1=mysql_query("select name from project where id='$id'");
-	while($row1=mysql_fetch_array($results1)) {
-		list($parent)=mysql_fetch_array(mysql_query("select parent from project where id='$id'"));
+	$results1=mysqli_query($connect, "select name from project where id='$id'");
+	while($row1=mysqli_fetch_array($results1, MYSQLI_ASSOC)) {
+		list($parent)=mysqli_fetch_array(mysqli_query($connect, "select parent from project where id='$id'"), MYSQLI_NUM);
 		if($parent>0) {
 			get_project_name($parent);
 			}

@@ -1,6 +1,6 @@
 <?php
 	require('connection.php');
-	require('injectionKiller.php');
+	//require('injectionKiller.php');
 
 	if($_SERVER['QUERY_STRING'] == 'logout') {
 		session_start();

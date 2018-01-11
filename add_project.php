@@ -1,5 +1,6 @@
 <?php
-include('authentication.php');
+require_once("authentication.php");
+require_once("includes/connection.php");
 ?>
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
@@ -152,9 +153,9 @@ include ("includes/menu.php");
 <tr style='background-color:#BCC6CC;'><td align='right'>Technician Assigned</td><td align='left'><select name="technician_id" id="technician_id">
 <option value="-1">---Select---</option>
 <?php
-$results=mysql_query("select id,full_name from technicians");
-while($row=mysql_fetch_array($results)) {
-	echo "<option value='$row[id]'>$row[full_name]</option>";
+$results=mysqli_query($connect,"select id,full_name from technicians");
+while(list($tech_id, $tech_name)=mysqli_fetch_array($results, MYSQLI_NUM)) {
+	echo "<option value='$tech_id'>$tech_name</option>";
 	}
 ?>
 </select></td></tr>
